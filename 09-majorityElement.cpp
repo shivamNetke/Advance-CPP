@@ -92,12 +92,47 @@
 using namespace std;
 
 class Solution {
-    
-}
+    public:
+    int majorityElement(vector<int>& nums){
+        int freq = 0, ans = 0, n = nums.size();
+        for(int i = 0; i<n; i++){
+            if(freq == 0){
+                ans = nums[i];                    
+            }
+            if(ans == nums[i]){
+                freq++;
+            }
+            else
+            {
+                freq--;
+            }
+        }
+
+        int count = 0;
+        for(int val : nums){
+            if(val == ans){
+                count++;
+            }
+        }
+
+        if(count > n/2){
+            return ans;
+        }
+        else
+        {
+            return -1;
+        }
+
+        return ans;
+    }
+};
 
 int main(void)
 {
-    
+    Solution sol;
+
+    vector<int> nums2 = {2, 2, 1, 1, 1, 2, 2};
+    cout << "Majority Element in [2,2,1,1,1,2,2] is: " << sol.majorityElement(nums2) << endl;
 
     return 0;
 }
