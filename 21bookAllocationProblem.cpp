@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-bool isValid(vector<int> &arr, int n, int m, int maxAllowed){  // we rename mid = maxAllowed
+bool isValid(vector<int> &arr, int n, int m, int maxAllowed){  // we rename mid as maxAllowed
     int students = 1;
     int pages = 0;
 

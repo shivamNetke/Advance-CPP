@@ -25,7 +25,7 @@ int isPossibleAnswer(vector<int>&arr, int n, int m, int maxAllowedTime)
 
 int minTimeToPaint(vector<int>&arr, int n, int m)
 {
-    int sum = 0, maxVal = INT_MIN;   // FIX 1
+    int sum = 0, maxVal = INT_MIN;   
     for (int i = 0; i < n ; i++)
     {
         sum = sum + arr[i];
@@ -41,7 +41,7 @@ int minTimeToPaint(vector<int>&arr, int n, int m)
         if (isPossibleAnswer(arr, n, m, mid)) // left
         {
             ans = mid;
-            end = mid - 1;    // FIX 2
+            end = mid - 1;    
         }
         else  // right
         {
@@ -49,7 +49,7 @@ int minTimeToPaint(vector<int>&arr, int n, int m)
         }
     }
 
-    return ans;   // FIX 3
+    return ans;  
 }
 
 int main(void)
